@@ -1,5 +1,7 @@
 commit=$(shell git rev-parse HEAD)
 
+all: build push
+
 build:
 	docker build -t $(REGISTRY)/cookcli:$(commit) -t $(REGISTRY)/cookcli:latest .
 
